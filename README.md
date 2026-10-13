@@ -1,30 +1,46 @@
-# Pilgrims
+# Pilgrims Sales & Lettings
 
-A simple static website for Pilgrims, an independent coffee shop in Woking, Surrey.
+A redesign of [pilgrimsresidential.com](https://www.pilgrimsresidential.com/) for Pilgrims, a family-run, independent estate agent covering Woking, West Byfleet, Cobham, Weybridge, Guildford and surrounding areas.
+
+Plain HTML and CSS, with no build step and no JavaScript. Open `index.html` in a browser or upload the folder to any static host.
 
 ## Pages
 
-- `index.html` – Home: hero, highlights, menu favourites
-- `about.html` – About: the Pilgrims story and values
-- `contact.html` – Contact: address, opening hours, enquiry form and map
+| File | Page | Status |
+| --- | --- | --- |
+| `index.html` | Home | Done |
+| `about.html` | About Us and The Pilgrims Story | Waiting for content |
+| `selling.html` | Selling & Marketing with Pilgrims | Waiting for content |
+| `letting.html` | Letting & Marketing with Pilgrims | Waiting for content |
+| `reviews.html` | Reviews & Testimonials | Waiting for content |
+| `contact.html` | Contact (West Byfleet branch) | Waiting for content |
 
-Styling lives in `css/styles.css` (navy and gold palette defined as CSS variables at the top) and the small amount of JavaScript (mobile menu, contact form) is in `js/main.js`.
+## Brand
 
-## Running locally
+Colours are defined as CSS variables at the top of `css/styles.css`:
 
-No build step is needed. Open `index.html` in a browser, or serve the folder:
+- `--brand` `#312682`: Pilgrims navy/purple
+- `--green` `#303b37`: Pilgrims dark green
+- `--accent` `#c8956d`: warm brass accent
 
-```sh
-python3 -m http.server 8000
-```
+Fonts: DM Serif Display (headings) and Manrope (body), from Google Fonts.
 
-## Before going live
+## Photography
 
-Replace the placeholder details with the real ones:
+Drop images into `images/` using these names. Until an image is added, a brand-coloured placeholder is shown.
 
-- **Address** – `contact.html` (and the map query in the `<iframe>`)
-- **Phone** – `01483 000000` in `contact.html`
-- **Email** – `hello@example.com` in `contact.html`
-- **Opening hours** – `contact.html` and the footer of each page
-- **Menu and prices** – `index.html`
-- **Contact form** – currently shows a thank-you message without sending anything. Connect it to a form service (e.g. Formspree or Netlify Forms) by adding an `action` to the `<form>` and removing the submit handler in `js/main.js`.
+- `hero.jpg`: home page hero (landscape, at least 2400px wide)
+- `journey.jpg`: "Your Journey Starts Here" (portrait 4:5)
+- `sale-1.jpg` … `sale-3.jpg`, `let-1.jpg` … `let-3.jpg`: featured property photos (4:3)
+
+## Links to the existing site
+
+Property search, valuations and other system-driven pages link to the current site:
+
+- Sales search: https://www.pilgrimsresidential.com/branches/west-byfleet/sales
+- Lettings search: https://www.pilgrimsresidential.com/lettings
+- Online valuation: https://valuation.pilgrimsresidential.com/home/3773
+- Tenant fees: https://www.pilgrimsresidential.com/pages/tenant-fees
+- Privacy policy: https://www.pilgrimsresidential.com/pages/privacy-policy
+
+Still to confirm: the **News** page URL and the **video** on the home page. Both currently link to the existing homepage. The featured property cards are a snapshot and link to the search pages, so update them when listings change.
